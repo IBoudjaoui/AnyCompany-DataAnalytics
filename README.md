@@ -175,10 +175,3 @@ streamlit run streamlit/marketing_roi.py
 
 ---
 
-## Soumission
-
-**Email** : `MBAESG_EVALUATION_ARCHITECTURE_BIGDATA_2026`
-
-Inclure :
-- 🔗 Lien vers ce dépôt GitHub
-- 🔐 URL Snowflake + identifiants de connexion
