@@ -2,7 +2,7 @@
 --             par région et par mode de paiement
 
 
-USE WAREHOUSE LAB_WH;
+USE WAREHOUSE ANYCOMPANY_WH;
 USE DATABASE ANYCOMPANY_LAB;
 USE SCHEMA SILVER;
 
@@ -75,18 +75,6 @@ WHERE transaction_type = 'Sale'
 GROUP BY 1
 ORDER BY ca_total DESC
 LIMIT 5;
-
--- Ventes par région
-SELECT
-    region,
-    COUNT(*)              AS nb_transactions,
-    ROUND(SUM(amount), 2) AS ca_total,
-    ROUND(AVG(amount), 2) AS panier_moyen,
-    ROUND(SUM(amount) * 100.0 / SUM(SUM(amount)) OVER (), 2) AS part_ca_pct
-FROM ANYCOMPANY_LAB.SILVER.FINANCIAL_TRANSACTIONS
-WHERE transaction_type = 'Sale'
-GROUP BY 1
-ORDER BY ca_total DESC;
 
 -- Répartition par tranche d'âge
 SELECT

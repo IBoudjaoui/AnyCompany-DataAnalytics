@@ -2,7 +2,7 @@
 --            par catégorie, région et niveau de remise
 
 
-USE WAREHOUSE LAB_WH;
+USE WAREHOUSE ANYCOMPANY_WH;
 USE DATABASE ANYCOMPANY_LAB;
 USE SCHEMA SILVER;
 

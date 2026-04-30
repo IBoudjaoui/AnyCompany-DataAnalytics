@@ -1,7 +1,7 @@
 -- Objectif : Évaluer la performance des campagnes marketing,
 --            identifier les plus efficaces et calculer le ROI
 
-USE WAREHOUSE LAB_WH;
+USE WAREHOUSE ANYCOMPANY_WH;
 USE DATABASE ANYCOMPANY_LAB;
 USE SCHEMA SILVER;
 
@@ -104,7 +104,7 @@ SELECT
     ROUND(AVG(rating), 2) AS note_moyenne,
     SUM(CASE WHEN rating >= 4 THEN 1 ELSE 0 END) AS avis_positifs,
     SUM(CASE WHEN rating <= 2 THEN 1 ELSE 0 END) AS avis_negatifs
-FROM SILVER.product_reviews
+FROM ANYCOMPANY_LAB.SILVER.PRODUCT_REVIEWS
 GROUP BY 1
 ORDER BY note_moyenne DESC;
 
